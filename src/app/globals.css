@@ -11,4 +11,8 @@
     @apply text-xl;
     @apply font-medium;
   }
+  span {
+    @apply text-2xl;
+    @apply font-semibold;
+  }
 }
