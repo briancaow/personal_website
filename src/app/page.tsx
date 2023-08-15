@@ -31,10 +31,10 @@ export default function Home() {
 
   return (
     <main className="px-9">
-      <div className="flex flex-row flex-wrap min-h-screen items-center justify-center space-x-3 bg-white-300">
-        <div className="flex flex-none flex-col w-[400px] h-[700px] items-center justify-center bg-red-500 space-y-3">
+      <div className="flex flex-row flex-wrap min-h-screen items-center justify-center space-x-3">
+        <div className="flex flex-col max-w-[500px] items-end justify-center space-y-3 bg-red-500">
           <Section>
-            <div className="bg-white rounded-full overflow-hidden">
+            <div className="rounded-full overflow-hidden">
               <Image
                 src="/BrianCao.jpg"
                 alt="Picture of author"
@@ -51,7 +51,7 @@ export default function Home() {
               </p>
             </div>
           </Section>
-          <div className="w-[300px] h-[200px]">
+          <div className="max-w-[400px]">
             <Section>
               <h1>GitHub</h1>
               <div>
@@ -122,7 +122,7 @@ export default function Home() {
             </Section>
           </div>
 
-          <div className="w-[70px] h-[170px] bg-yellow-500">
+          <div>
             <Section>
               <a
                 target="_blank"
@@ -164,7 +164,7 @@ export default function Home() {
             </Section>
           </div>
         </div>
-        <div className="flex flex-col w-[300px] h-[550px] flex-none justify-center bg-yellow-500 space-y-3">
+        <div className="flex flex-col w-[300px] h-[550px] flex-none justify-center space-y-3 bg-yellow-500">
           <Section>
             <h1>Resume</h1>
           </Section>
