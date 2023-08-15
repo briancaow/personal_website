@@ -31,8 +31,8 @@ export default function Home() {
 
   return (
     <main className="px-9">
-      <div className="flex flex-row min-h-screen items-center justify-center space-x-3 bg-white-300">
-        <div className="flex flex-col space-y-3">
+      <div className="flex min-h-screen items-center justify-center space-x-3 bg-white-300">
+        <div className="flex-none flex-row w-[400px] h-[550px] bg-red-500 space-y-3">
           <Section>
             <div className="bg-white rounded-full overflow-hidden">
               <Image
@@ -44,9 +44,11 @@ export default function Home() {
             </div>
             <h1>Brian Cao</h1>
             <div className="text-center">
-              Passionate about making indie-projects and building cool things.{" "}
-              <br /> Current Junior studying computer science at the University
-              of Washington
+              <p>
+                Passionate about making indie-projects and building cool things.{" "}
+                <br /> Current Junior studying computer science at the
+                University of Washington
+              </p>
             </div>
           </Section>
           <div className="ml-12">
@@ -67,68 +69,84 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col space-y-3 items-start">
+        <div className="flex flex-col flex-none w-[700px] h-[550px] justify-center space-y-3 bg-blue-500">
           <div className="flex flex-row space-x-3 items-end">
             <div className="basis-1/2 mt-6">
               <Section>
                 <h1>About Me</h1>
                 <ul>
-                  <li>👴 {getAge()} years old</li>
-                  <li>🇻🇳 Vietnamese</li>
-                  <li>🎓 University of Washington</li>
-                  <li>💻 Computer Science</li>
-                  <li>🙏 Looking for work</li>
-                  <li>🏂 Snowboarding {">"} Skiing</li>
+                  <li>
+                    <p>👴 {getAge()} years old</p>{" "}
+                  </li>
+                  <li>
+                    <p>🇻🇳 Vietnamese</p>
+                  </li>
+                  <li>
+                    <p>🎓 University of Washington</p>
+                  </li>
+                  <li>
+                    <p>💻 Computer Science</p>
+                  </li>
+                  <li>
+                    <p>🙏 Looking for work</p>
+                  </li>
+                  <li>
+                    <p>🏂 Snowboarding {">"} Skiing</p>
+                  </li>
                 </ul>
               </Section>
             </div>
-            <div className="basis-1/2">
+            <Section>
+              <h1>Activities</h1>
+              <div>
+                <h2>DubHacks NEXT</h2>
+                <h2>Lavin Entreprenuership Program</h2>
+              </div>
+            </Section>
+          </div>
+          <div className="flex flex-row align-top space-x-3">
+            <div>
               <Section>
-                <h1>Activities</h1>
+                <h1>My Projects</h1>
                 <div>
-                  <h2>DubHacks NEXT</h2>
-                  <h2>Lavin Entreprenuership Program</h2>
+                  <h2>Amethyst</h2>
+                  <p>
+                    What if learning happened where we consumed information?
+                  </p>
+                  <h2>QuikSwitch</h2>
+                  <p>What if we could Switch between multiple apps at once?</p>
+                  <h2>BuildLapse</h2>
+                  <p>What if we could market our products by building them?</p>
+                  <h2>BarBouncer</h2>
+                  <p>What if I made a IOS app?</p>
                 </div>
               </Section>
             </div>
-          </div>
-          <div className="flex flex-row align-top space-x-3">
-            <Section>
-              <h1>My Projects</h1>
-              <div>
-                <h2>Amethyst</h2>
-                <p>What if learning happened where we consumed information?</p>
-                <h2>QuikSwitch</h2>
-                <p>What if we could Switch between multiple apps at once?</p>
-                <h2>BuildLapse</h2>
-                <p>What if we could market our products by building them?</p>
-                <h2>BarBouncer</h2>
-                <p>What if I made a IOS app?</p>
-              </div>
-            </Section>
-            <div className="flex flex-col mb-20 p-3 space-y-3 items-center rounded-lg border-2 shadow-md">
-              <Image
-                src="/linkedIn.png"
-                alt="Picture of author"
-                width={40}
-                height={40}
-              />
-              <Image
-                src="/x.svg"
-                alt="Picture of author"
-                width={75}
-                height={75}
-              />
-              <Image
-                src="/github.png"
-                alt="Picture of author"
-                width={40}
-                height={40}
-              />
+            <div className="w-[70px] h-[170px] bg-yellow-500">
+              <Section>
+                <Image
+                  src="/linkedIn.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+                <Image
+                  src="/x.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+                <Image
+                  src="/github.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+              </Section>
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-3">
+        <div className="flex flex-col w-[300px] h-[550px] flex-none justify-center bg-yellow-500 space-y-3">
           <Section>
             <h1>Resume</h1>
           </Section>

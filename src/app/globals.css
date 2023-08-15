@@ -5,14 +5,16 @@
 @layer base {
   h1 {
     @apply text-2xl;
-    @apply font-semibold;
+    @apply font-medium;
+    @apply font-mono;
   }
   h2 {
     @apply text-xl;
     @apply font-medium;
+    @apply font-mono;
   }
-  span {
-    @apply text-2xl;
-    @apply font-semibold;
+  p {
+    @apply font-thin;
+    @apply font-mono;
   }
 }
