@@ -6,12 +6,12 @@
   h1 {
     @apply text-2xl;
     @apply font-medium;
-    @apply font-mono;
+    @apply font-sans;
   }
   h2 {
     @apply text-xl;
     @apply font-medium;
-    @apply font-mono;
+    @apply font-sans;
   }
   p {
     @apply font-thin;

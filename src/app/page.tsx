@@ -124,24 +124,43 @@ export default function Home() {
             </div>
             <div className="w-[70px] h-[170px] bg-yellow-500">
               <Section>
-                <Image
-                  src="/linkedIn.png"
-                  alt="Picture of author"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/x.png"
-                  alt="Picture of author"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/github.png"
-                  alt="Picture of author"
-                  width={40}
-                  height={40}
-                />
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/bcao/"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/linkedIn.png"
+                    alt="Picture of author"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/BrianCaoo"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/x.png"
+                    alt="Picture of author"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+
+                <a
+                  target="_blank"
+                  href="https://github.com/briancaow"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/github.png"
+                    alt="Picture of author"
+                    width={40}
+                    height={40}
+                  />
+                </a>
               </Section>
             </div>
           </div>
