@@ -31,8 +31,8 @@ export default function Home() {
 
   return (
     <main className="px-9">
-      <div className="flex min-h-screen items-center justify-center space-x-3 bg-white-300">
-        <div className="flex-none flex-row w-[400px] h-[550px] bg-red-500 space-y-3">
+      <div className="flex flex-row flex-wrap min-h-screen items-center justify-center space-x-3 bg-white-300">
+        <div className="flex flex-none flex-col w-[400px] h-[700px] items-center justify-center bg-red-500 space-y-3">
           <Section>
             <div className="bg-white rounded-full overflow-hidden">
               <Image
@@ -51,7 +51,7 @@ export default function Home() {
               </p>
             </div>
           </Section>
-          <div className="ml-12">
+          <div className="w-[300px] h-[200px]">
             <Section>
               <h1>GitHub</h1>
               <div>
@@ -69,100 +69,99 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col flex-none w-[700px] h-[550px] justify-center space-y-3 bg-blue-500">
-          <div className="flex flex-row space-x-3 items-end">
-            <div className="basis-1/2 mt-6">
-              <Section>
-                <h1>About Me</h1>
-                <ul>
-                  <li>
-                    <p>👴 {getAge()} years old</p>{" "}
-                  </li>
-                  <li>
-                    <p>🇻🇳 Vietnamese</p>
-                  </li>
-                  <li>
-                    <p>🎓 University of Washington</p>
-                  </li>
-                  <li>
-                    <p>💻 Computer Science</p>
-                  </li>
-                  <li>
-                    <p>🙏 Looking for work</p>
-                  </li>
-                  <li>
-                    <p>🏂 Snowboarding {">"} Skiing</p>
-                  </li>
-                </ul>
-              </Section>
-            </div>
+        <div className="flex flex-row flex-wrap w-[700px] justify-center space-y-3 space-x-3 bg-blue-500">
+          <div className="">
+            <Section>
+              <h1>About Me</h1>
+              <ul>
+                <li>
+                  <p>👴 {getAge()} years old</p>
+                </li>
+                <li>
+                  <p>🇻🇳 Vietnamese</p>
+                </li>
+                <li>
+                  <p>🎓 University of Washington</p>
+                </li>
+                <li>
+                  <p>💻 Computer Science</p>
+                </li>
+                <li>
+                  <p>🙏 Looking for work</p>
+                </li>
+                <li>
+                  <p>🏂 Snowboarding {">"} Skiing</p>
+                </li>
+              </ul>
+            </Section>
+          </div>
+
+          <div className="">
             <Section>
               <h1>Activities</h1>
               <div>
                 <h2>DubHacks NEXT</h2>
-                <h2>Lavin Entreprenuership Program</h2>
+                <h2>Lavin Entrepreneurship Program</h2>
               </div>
             </Section>
           </div>
-          <div className="flex flex-row align-top space-x-3">
-            <div>
-              <Section>
-                <h1>My Projects</h1>
-                <div>
-                  <h2>Amethyst</h2>
-                  <p>
-                    What if learning happened where we consumed information?
-                  </p>
-                  <h2>QuikSwitch</h2>
-                  <p>What if we could Switch between multiple apps at once?</p>
-                  <h2>BuildLapse</h2>
-                  <p>What if we could market our products by building them?</p>
-                  <h2>BarBouncer</h2>
-                  <p>What if I made a IOS app?</p>
-                </div>
-              </Section>
-            </div>
-            <div className="w-[70px] h-[170px] bg-yellow-500">
-              <Section>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/bcao/"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/linkedIn.png"
-                    alt="Picture of author"
-                    width={40}
-                    height={40}
-                  />
-                </a>
-                <a
-                  target="_blank"
-                  href="https://twitter.com/BrianCaoo"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/x.png"
-                    alt="Picture of author"
-                    width={40}
-                    height={40}
-                  />
-                </a>
 
-                <a
-                  target="_blank"
-                  href="https://github.com/briancaow"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/github.png"
-                    alt="Picture of author"
-                    width={40}
-                    height={40}
-                  />
-                </a>
-              </Section>
-            </div>
+          <div className="">
+            <Section>
+              <h1>My Projects</h1>
+              <div>
+                <h2>Amethyst</h2>
+                <p>What if learning happened where we consumed information?</p>
+                <h2>QuikSwitch</h2>
+                <p>What if we could Switch between multiple apps at once?</p>
+                <h2>BuildLapse</h2>
+                <p>What if we could market our products by building them?</p>
+                <h2>BarBouncer</h2>
+                <p>What if I made a IOS app?</p>
+              </div>
+            </Section>
+          </div>
+
+          <div className="w-[70px] h-[170px] bg-yellow-500">
+            <Section>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/bcao/"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/linkedIn.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://twitter.com/BrianCaoo"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/x.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://github.com/briancaow"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/github.png"
+                  alt="Picture of author"
+                  width={40}
+                  height={40}
+                />
+              </a>
+            </Section>
           </div>
         </div>
         <div className="flex flex-col w-[300px] h-[550px] flex-none justify-center bg-yellow-500 space-y-3">
