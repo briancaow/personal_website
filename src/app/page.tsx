@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="px-9">
       <div className="flex flex-row flex-wrap min-h-screen items-center justify-center space-x-3">
-        <div className="flex flex-col max-w-[500px] items-end justify-center space-y-3 bg-red-500">
+        <div className="flex flex-col max-w-[800px] items-end justify-center space-y-3 bg-red-500">
           <Section>
             <div className="rounded-full overflow-hidden">
               <Image
@@ -51,6 +51,7 @@ export default function Home() {
               </p>
             </div>
           </Section>
+
           <div className="max-w-[400px]">
             <Section>
               <h1>GitHub</h1>
