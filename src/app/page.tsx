@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import Section from "./components/Section";
-import DemoVideo from "./components/DemoVideo";
 import GitHubCalendar, { Props } from "react-github-calendar";
+import AmethystCarousel from "./components/AmethystCarousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import QuikSwitchCarousel from "./components/QuikSwitchCarousel";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -42,7 +44,7 @@ export default function Home() {
               height={100}
             />
           </div>
-          <h1>Brian Cao</h1>
+          <h2>Brian Cao</h2>
           <div className="text-center">
             <p>
               Passionate about making Indie-projects and building cool things.
@@ -55,26 +57,14 @@ export default function Home() {
 
       <div className="flex flex-row flex-wrap justify-center items-start">
         <Section title="About Me">
-          <ul>
-            <li>
-              <p>👴 {getAge()} years old</p>
-            </li>
-            <li>
-              <p>🇻🇳 Vietnamese</p>
-            </li>
-            <li>
-              <p>🎓 University of Washington</p>
-            </li>
-            <li>
-              <p>💻 Computer Science</p>
-            </li>
-            <li>
-              <p>🙏 Looking for work</p>
-            </li>
-            <li>
-              <p>🏂 Snowboarding {">"} Skiing</p>
-            </li>
-          </ul>
+          <div>
+            <p>👴 {getAge()} years old</p>
+            <p>🇻🇳 Vietnamese</p>
+            <p>🎓 University of Washington</p>
+            <p>💻 Computer Science</p>
+            <p>🙏 Looking for work</p>
+            <p>🏂 Snowboarding {">"} Skiing</p>
+          </div>
         </Section>
 
         <Section title="GitHub">
@@ -91,24 +81,16 @@ export default function Home() {
           </div>
         </Section>
         <Section title="Projects">
-          <ul>
-            <li>
-              <p>Amethyst</p>
-            </li>
-            <li>
-              <p>QuikSwitch</p>
-            </li>
-            <li>
-              <p>BuildLapse</p>
-            </li>
-            <li>
-              <p>BarBouncer</p>
-            </li>
-          </ul>
+          <div>
+            <p>Amethyst</p>
+            <p>QuikSwitch</p>
+            <p>BuildLapse</p>
+            <p>BarBouncer</p>
+          </div>
         </Section>
       </div>
-      <div className="flex flex-col items-center mx-5 bg-yellow-500">
-        <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap bg-red-500">
+      <div className="flex flex-col items-center mx-5 space-y-6 bg-yellow-500">
+        <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10 bg-red-500">
           <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
             <div className="flex flex-row space-x-3 items-center">
               <Image
@@ -119,35 +101,32 @@ export default function Home() {
               />
               <h2>Amethyst</h2>
             </div>
-            <p>What if learning happened where we consumed information?</p>
-          </div>
-          <div className="flex flex-col items-center justify-center lg:w-4/6">
-            <DemoVideo source="/2xAmethyst_CreateFlashcard_Demo.mp4" />
-            <h3>Create Flashcards</h3>
-          </div>
-          <div className="bg-green-500 w-full md:w-2/3 lg:1/3 px-3 pt-3">
             <p>
-              The #1 source of up to date and relevant information is found
-              through the browser. Despite this, there is little to no
-              infrastructure for retaining or referencing that information.
+              What if learning happened where we consumed information? <br />
               <br />
-              <br />
-              However, with Amethyst, anyone from students to knowledge-workers
-              will be able to discover, understand, and retain relevant
-              information.
+              With Amethyst, anyone from students to knowledge-workers will be
+              able to discover, understand, and retain relevant information
+              without leaving their browser.
             </p>
           </div>
+          <AmethystCarousel />
         </div>
-        <div className="flex flex-col items-center justify-center lg:w-2/3">
-          <DemoVideo source="/2xAmethyst_SelectDeck_Demo.mp4" />
-          <h3>Select From Nested Decks</h3>
+        <div className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap bg-orange-500">
+          <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
+            <div className="flex flex-row space-x-3 items-center">
+              <Image
+                src="/QS_256.png"
+                alt="QuikSwitch Logo"
+                width={60}
+                height={60}
+              />
+              <h2>QuikSwitch</h2>
+            </div>
+            <p>What if we could Switch between multiple apps at once?</p>
+          </div>
+          <QuikSwitchCarousel />
         </div>
-        <div className="flex flex-col items-center justify-center lg:w-2/3">
-          <DemoVideo source="/2xAmethyst_Edit_Demo.mp4" />
-          <h3>Edit with Rich Text</h3>
-        </div>
-        <h2>QuikSwitch</h2>
-        <p>What if we could Switch between multiple apps at once?</p>
+
         <h2>BuildLapse</h2>
         <p>What if we could market our products by building them?</p>
         <h2>BarBouncer</h2>

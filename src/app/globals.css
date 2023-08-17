@@ -4,12 +4,11 @@
 
 @layer base {
   h1 {
-    @apply text-3xl;
-    @apply font-semibold;
+    @apply text-lg;
     @apply font-sans;
   }
   h2 {
-    @apply text-5xl;
+    @apply text-3xl;
     @apply font-semibold;
     @apply font-sans;
   }
@@ -19,7 +18,7 @@
     @apply font-sans;
   }
   p {
-    @apply font-light;
+    @apply font-normal;
     @apply text-lg;
     @apply md:text-xl;
     @apply lg:text-2xl;
