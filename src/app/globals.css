@@ -18,10 +18,10 @@
     @apply font-sans;
   }
   p {
-    @apply font-normal;
+    @apply m-0;
     @apply text-lg;
-    @apply md:text-xl;
-    @apply lg:text-2xl;
+    @apply lg:text-xl;
+    @apply font-normal;
     @apply font-sans;
   }
 }

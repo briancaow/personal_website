@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import Section from "./components/Section";
+import Section from "./components/section";
 import GitHubCalendar, { Props } from "react-github-calendar";
-import AmethystCarousel from "./components/AmethystCarousel";
+import AmethystCarousel from "./components/amethyst_carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import QuikSwitchCarousel from "./components/QuikSwitchCarousel";
+import QuikSwitchCarousel from "./components/quik_switch_carousel";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -47,24 +47,63 @@ export default function Home() {
           <h2>Brian Cao</h2>
           <div className="text-center">
             <p>
-              Passionate about making Indie-projects and building cool things.
+              Passionate about making indie projects and building cool things.
               Current Junior studying computer science at the University of
               Washington.
             </p>
+          </div>
+          <div className="flex flex-row items-center">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/bcao/"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/linkedIn.png"
+                alt="Picture of author"
+                width={40}
+                height={40}
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://twitter.com/BrianCaoo"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/x.png"
+                alt="Picture of author"
+                width={50}
+                height={50}
+              />
+            </a>
+
+            <a
+              target="_blank"
+              href="https://github.com/briancaow"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/github.png"
+                alt="Picture of author"
+                width={40}
+                height={40}
+              />
+            </a>
           </div>
         </div>
       </div>
 
       <div className="flex flex-row flex-wrap justify-center items-start">
         <Section title="About Me">
-          <div>
-            <p>👴 {getAge()} years old</p>
-            <p>🇻🇳 Vietnamese</p>
-            <p>🎓 University of Washington</p>
-            <p>💻 Computer Science</p>
-            <p>🙏 Looking for work</p>
-            <p>🏂 Snowboarding {">"} Skiing</p>
-          </div>
+          <p>
+            👴 {getAge()} years old <br />
+            🇻🇳 Vietnamese <br />
+            🎓 University of Washington <br />
+            💻 Computer Science <br />
+            🙏 Looking for work <br />
+            🏂 Snowboarding {">"} Skiing <br />
+          </p>
         </Section>
 
         <Section title="GitHub">
@@ -82,10 +121,12 @@ export default function Home() {
         </Section>
         <Section title="Projects">
           <div>
-            <p>Amethyst</p>
-            <p>QuikSwitch</p>
-            <p>BuildLapse</p>
-            <p>BarBouncer</p>
+            <p>
+              Amethyst <br />
+              QuikSwitch <br />
+              BuildLapse <br />
+              BarBouncer <br />
+            </p>
           </div>
         </Section>
       </div>
@@ -122,7 +163,7 @@ export default function Home() {
               />
               <h2>QuikSwitch</h2>
             </div>
-            <p>What if we could Switch between multiple apps at once?</p>
+            <p>What if we could switch between multiple apps at once?</p>
           </div>
           <QuikSwitchCarousel />
         </div>
@@ -130,12 +171,12 @@ export default function Home() {
         <h2>BuildLapse</h2>
         <p>What if we could market our products by building them?</p>
         <h2>BarBouncer</h2>
-        <p>What if I made a IOS app?</p>
+        <p>What if I made an IOS app?</p>
       </div>
 
       <Section title="Activities">
         <div>
-          <h2>Surf AI 2.0 hackathon Win</h2>
+          <h2>Surf AI 2.0 Hackathon Win</h2>
           <h2>DubHacks NEXT</h2>
           <h2>Lavin Entrepreneurship Program</h2>
         </div>
@@ -143,48 +184,6 @@ export default function Home() {
       <Section>
         <h1>Resume</h1>
       </Section>
-      <Section>
-        <div className="flex flex-row items-center">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/bcao/"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/linkedIn.png"
-              alt="Picture of author"
-              width={40}
-              height={40}
-            />
-          </a>
-          <a
-            target="_blank"
-            href="https://twitter.com/BrianCaoo"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/x.png"
-              alt="Picture of author"
-              width={50}
-              height={50}
-            />
-          </a>
-
-          <a
-            target="_blank"
-            href="https://github.com/briancaow"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/github.png"
-              alt="Picture of author"
-              width={40}
-              height={40}
-            />
-          </a>
-        </div>
-      </Section>
-
       <Section>
         <h1>Contact</h1>
         <p>Email: briancao02@gmail.com</p>
