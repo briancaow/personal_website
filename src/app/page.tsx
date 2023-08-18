@@ -3,8 +3,9 @@ import Image from "next/image";
 import Section from "./components/section";
 import GitHubCalendar, { Props } from "react-github-calendar";
 import AmethystCarousel from "./components/amethyst_carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
 import QuikSwitchCarousel from "./components/quik_switch_carousel";
+import HackathonCarousel from "./components/hackathon_carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -60,9 +61,10 @@ export default function Home() {
             >
               <Image
                 src="/linkedIn.png"
-                alt="Picture of author"
+                alt="linkedIn Logo"
                 width={40}
                 height={40}
+                className="hover:opacity-75"
               />
             </a>
             <a
@@ -72,9 +74,10 @@ export default function Home() {
             >
               <Image
                 src="/x.png"
-                alt="Picture of author"
+                alt="X Logo"
                 width={50}
                 height={50}
+                className="hover:opacity-75"
               />
             </a>
 
@@ -85,9 +88,10 @@ export default function Home() {
             >
               <Image
                 src="/github.png"
-                alt="Picture of author"
+                alt="GitHub Logo"
                 width={40}
                 height={40}
+                className="hover:opacity-75"
               />
             </a>
           </div>
@@ -124,8 +128,14 @@ export default function Home() {
             <p>
               Amethyst <br />
               QuikSwitch <br />
-              BuildLapse <br />
-              BarBouncer <br />
+            </p>
+          </div>
+        </Section>
+        <Section title="Activities">
+          <div>
+            <p>
+              Surf AI 2.0 Hackathon Win <br />
+              DubHacks NEXT <br />
             </p>
           </div>
         </Section>
@@ -133,6 +143,9 @@ export default function Home() {
       <div className="flex flex-col items-center mx-5 space-y-6 bg-yellow-500">
         <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10 bg-red-500">
           <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
+            <p className="opacity-75 italic">
+              First Place Surf AI 2.0 Hackathon Winner
+            </p>
             <div className="flex flex-row space-x-3 items-center">
               <Image
                 src="/AmethystLogo.png"
@@ -142,9 +155,10 @@ export default function Home() {
               />
               <h2>Amethyst</h2>
             </div>
+            <h3 className="opacity-75 italic">
+              What if learning happened where we consumed information?
+            </h3>
             <p>
-              What if learning happened where we consumed information? <br />
-              <br />
               With Amethyst, anyone from students to knowledge-workers will be
               able to discover, understand, and retain relevant information
               without leaving their browser.
@@ -154,6 +168,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap bg-orange-500">
           <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
+            <p className="opacity-75 italic">
+              Prev. Top 50 Paid Productivity App | Featured on{" "}
+              <a href="https://www.geekwire.com/2023/univ-of-washington-students-show-off-their-startup-ideas-at-dubhacks-next-demo-day/">
+                GeekWire
+              </a>
+            </p>
             <div className="flex flex-row space-x-3 items-center">
               <Image
                 src="/QS_256.png"
@@ -163,31 +183,91 @@ export default function Home() {
               />
               <h2>QuikSwitch</h2>
             </div>
-            <p>What if we could switch between multiple apps at once?</p>
+            <h3 className="opacity-75 italic">
+              What if we could switch between multiple apps at once?
+            </h3>
+            <p>
+              Tired of manually switching between and organizing multiple apps
+              at once? With QuikSwitch, anyone who values efficiency and
+              productivity can streamline their workflow like never before.
+            </p>
           </div>
           <QuikSwitchCarousel />
         </div>
 
-        <h2>BuildLapse</h2>
-        <p>What if we could market our products by building them?</p>
-        <h2>BarBouncer</h2>
-        <p>What if I made an IOS app?</p>
-      </div>
-
-      <Section title="Activities">
-        <div>
-          <h2>Surf AI 2.0 Hackathon Win</h2>
-          <h2>DubHacks NEXT</h2>
-          <h2>Lavin Entrepreneurship Program</h2>
+        <h2>Surf AI 2.0 Hackathon Win</h2>
+        <HackathonCarousel />
+        <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
+          <p className="italic">April, 2023</p>
+          <p>
+            Participated and won first place in an AI hackathon with my friend
+            Parsa and over 200 tech enthusiasts in Seattle. Developed an
+            application we called Amethyst that could break any topic down into
+            subtopics recursively, quiz users on that topic, and explain that
+            topic in different learning styles. <br />
+            <br />
+            Our first place prize included: <br />
+            <ol className="list-decimal">
+              <li>
+                A formal interview with AI2 incubator partners to explore a
+                potential investment of up to $500,000
+              </li>
+              <li>90 minute pitch coaching session with Pitch4Impact</li>
+              <li>
+                SWOT debriefing with Mossy Ventures and free entry into the most
+                relevant Mossy Ventures angel conference program
+              </li>
+              <li>
+                1 hour consultation every other week for 90 days and a 1 page
+                website from The Briarwood Group
+              </li>
+              <li>A 90-day hot desk package at SURF Incubator</li>
+              <li>
+                A $200 gift card to Ciudad Grill restaurant from Ascend VC
+              </li>
+              <li>
+                A pitch recording for Y-combinator submission from Passion Fruit
+              </li>
+              <li>$2,500 in OpenAI credits from OpenAI</li>
+            </ol>
+          </p>
         </div>
-      </Section>
-      <Section>
-        <h1>Resume</h1>
-      </Section>
-      <Section>
-        <h1>Contact</h1>
+        <h2>DubHacks NEXT</h2>
+        <Image
+          className="rounded-lg overflow-hidden"
+          src="/next_1.jpg"
+          alt="next Pic 1"
+          width={900}
+          height={900}
+        />
+        <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
+          <p className="italic">April, 2023</p>
+          <p>
+            Participated as an EiR (Entrepreneur in Residence) in{" "}
+            <a href="https://next.dubhacks.co/">Dubhacks NEXT</a>'s batch 2
+            &mdash; a 16-week incubator for founders and
+            Entrepreneurs-in-Residence (EiR), that works with prominent
+            organizations in the area to put on workshops, speakers, networking
+            events, and more to connect members with the resources, knowledge,
+            and people they need to take their project to the next level.
+            <br />
+            <br />
+            Developed a MacOS application called QuikSwitch that helps mac users
+            efficently organize and switch multiple application windows. <br />
+            <br />
+            Previously ranked in the top 50 paid productivity apps in the mac
+            app store and was featured in{" "}
+            <a href="https://www.geekwire.com/2023/univ-of-washington-students-show-off-their-startup-ideas-at-dubhacks-next-demo-day/">
+              GeekWire
+            </a>
+            .
+          </p>
+        </div>
+        <h2>Lavin Entrepreneurship Program</h2>
+        <h2>Resume</h2>
+        <h2>Contact</h2>
         <p>Email: briancao02@gmail.com</p>
-      </Section>
+      </div>
     </main>
   );
 }
