@@ -7,6 +7,8 @@ import QuikSwitchCarousel from "./components/quik_switch_carousel";
 import HackathonCarousel from "./components/hackathon_carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LavinCarousel from "./components/lavin_carousel";
+import { useRef } from "react";
+import next from "next/types";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -33,6 +35,16 @@ export default function Home() {
     diff /= 60 * 60 * 24;
     return Math.floor(diff / 365.25);
   };
+
+  const handleScroll = (ref: any) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const amethystRef = useRef(null);
+  const quikSwitchRef = useRef(null);
+  const surfRef = useRef(null);
+  const nextRef = useRef(null);
+  const lavinRef = useRef(null);
 
   return (
     <main className="flex flex-col py-10 min-h-screen items-center justify-start">
@@ -127,23 +139,65 @@ export default function Home() {
         <Section title="Projects">
           <div>
             <p>
-              Amethyst <br />
-              QuikSwitch <br />
+              <button
+                className="underline"
+                onClick={() => {
+                  handleScroll(amethystRef);
+                }}
+              >
+                Amethyst
+              </button>{" "}
+              <br />
+              <button
+                className="underline"
+                onClick={() => {
+                  handleScroll(quikSwitchRef);
+                }}
+              >
+                QuikSwitch
+              </button>
+              <br />
             </p>
           </div>
         </Section>
         <Section title="Activities">
           <div>
             <p>
-              Surf AI 2.0 Hackathon Win <br />
-              DubHacks NEXT <br />
-              Lavin Entrepreneurship Program
+              <button
+                className="underline"
+                onClick={() => {
+                  handleScroll(surfRef);
+                }}
+              >
+                Surf AI 2.0 Hackathon Win
+              </button>
+              <br />
+              <button
+                className="underline"
+                onClick={() => {
+                  handleScroll(nextRef);
+                }}
+              >
+                DubHacks NEXT
+              </button>
+              <br />
+              <button
+                className="underline"
+                onClick={() => {
+                  handleScroll(lavinRef);
+                }}
+              >
+                Lavin Entrepreneurship Program
+              </button>
             </p>
           </div>
         </Section>
       </div>
       <div className="flex flex-col items-center mx-5 space-y-6 lg:px-10">
-        <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10">
+        <div
+          ref={amethystRef}
+          className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10"
+        >
           <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start">
             <p className="opacity-75 italic">
               First Place Surf AI 2.0 Hackathon Winner
@@ -168,7 +222,10 @@ export default function Home() {
           </div>
           <AmethystCarousel />
         </div>
-        <div className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap">
+        <div
+          ref={quikSwitchRef}
+          className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap"
+        >
           <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start">
             <p className="opacity-75 italic">
               Prev. Top 50 Paid Productivity App | Featured on{" "}
@@ -197,7 +254,7 @@ export default function Home() {
           <QuikSwitchCarousel />
         </div>
 
-        <h2>Surf AI 2.0 Hackathon Win</h2>
+        <h2 ref={surfRef}>Surf AI 2.0 Hackathon Win</h2>
         <HackathonCarousel />
         <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
           <p className="italic">April, 2023</p>
@@ -234,7 +291,7 @@ export default function Home() {
             </ol>
           </p>
         </div>
-        <h2>DubHacks NEXT</h2>
+        <h2 ref={nextRef}>DubHacks NEXT</h2>
         <Image
           className="rounded-lg overflow-hidden"
           src="/next_1.jpg"
@@ -265,7 +322,7 @@ export default function Home() {
             .
           </p>
         </div>
-        <h2>Lavin Entrepreneurship Program</h2>
+        <h2 ref={lavinRef}>Lavin Entrepreneurship Program</h2>
         <LavinCarousel />
         <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
           <p className="italic">May, 2023</p>
