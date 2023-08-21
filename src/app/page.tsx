@@ -6,6 +6,7 @@ import AmethystCarousel from "./components/amethyst_carousel";
 import QuikSwitchCarousel from "./components/quik_switch_carousel";
 import HackathonCarousel from "./components/hackathon_carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LavinCarousel from "./components/lavin_carousel";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -34,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col pt-10 min-h-screen items-center justify-start">
+    <main className="flex flex-col py-10 min-h-screen items-center justify-start">
       <div className="w-[310px] md:w-[400px] lg:w-[600px]">
         <div className="flex flex-col py-3 px-3 m-3 items-center space-y-3">
           <div className="rounded-full overflow-hidden">
@@ -136,13 +137,14 @@ export default function Home() {
             <p>
               Surf AI 2.0 Hackathon Win <br />
               DubHacks NEXT <br />
+              Lavin Entrepreneurship Program
             </p>
           </div>
         </Section>
       </div>
-      <div className="flex flex-col items-center mx-5 space-y-6 bg-yellow-500">
-        <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10 bg-red-500">
-          <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
+      <div className="flex flex-col items-center mx-5 space-y-6 lg:px-10">
+        <div className="flex flex-col lg:flex-row lg:justify-center w-full items-center flex-wrap space-y-10">
+          <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start">
             <p className="opacity-75 italic">
               First Place Surf AI 2.0 Hackathon Winner
             </p>
@@ -166,8 +168,8 @@ export default function Home() {
           </div>
           <AmethystCarousel />
         </div>
-        <div className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap bg-orange-500">
-          <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start bg-blue-500">
+        <div className="flex flex-col lg:flex-row-reverse lg:justify-center w-full items-center flex-wrap">
+          <div className="flex flex-col lg:px-6 items-center space-y-3 mb-3 lg:w-2/6 md:w-full lg:items-start">
             <p className="opacity-75 italic">
               Prev. Top 50 Paid Productivity App | Featured on{" "}
               <a href="https://www.geekwire.com/2023/univ-of-washington-students-show-off-their-startup-ideas-at-dubhacks-next-demo-day/">
@@ -244,7 +246,7 @@ export default function Home() {
           <p className="italic">April, 2023</p>
           <p>
             Participated as an EiR (Entrepreneur in Residence) in{" "}
-            <a href="https://next.dubhacks.co/">Dubhacks NEXT</a>'s batch 2
+            <a href="https://next.dubhacks.co/">Dubhacks NEXT</a>&apos;s batch 2
             &mdash; a 16-week incubator for founders and
             Entrepreneurs-in-Residence (EiR), that works with prominent
             organizations in the area to put on workshops, speakers, networking
@@ -264,9 +266,62 @@ export default function Home() {
           </p>
         </div>
         <h2>Lavin Entrepreneurship Program</h2>
-        <h2>Resume</h2>
-        <h2>Contact</h2>
+        <LavinCarousel />
+        <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
+          <p className="italic">May, 2023</p>
+          <p>
+            Member of the{" "}
+            <a href="https://foster.uw.edu/centers/buerk-ctr-entrepreneurship/undergraduate-entrepreneurship/lavin-entrepreneurship-program/">
+              Lavin Entrepreneurship Program
+            </a>{" "}
+            &mdash; a highly-competitive program for undergraduate entrepreneurs
+            from all majors and disciplines across the UW campus.
+          </p>
+        </div>
+        <h2>Let&apos;s Connect!</h2>
         <p>Email: briancao02@gmail.com</p>
+        <div className="flex flex-row items-center">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/bcao/"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/linkedIn.png"
+              alt="linkedIn Logo"
+              width={40}
+              height={40}
+              className="hover:opacity-75"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://twitter.com/BrianCaoo"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/x.png"
+              alt="X Logo"
+              width={50}
+              height={50}
+              className="hover:opacity-75"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://github.com/briancaow"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/github.png"
+              alt="GitHub Logo"
+              width={40}
+              height={40}
+              className="hover:opacity-75"
+            />
+          </a>
+        </div>
       </div>
     </main>
   );
