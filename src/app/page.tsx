@@ -341,7 +341,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/linkedIn.png"
+              src="/LinkedIn.png"
               alt="linkedIn Logo"
               width={40}
               height={40}
