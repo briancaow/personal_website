@@ -8,7 +8,6 @@ import HackathonCarousel from "./components/hackathon_carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LavinCarousel from "./components/lavin_carousel";
 import { useRef } from "react";
-import next from "next/types";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -266,30 +265,28 @@ export default function Home() {
             topic in different learning styles. <br />
             <br />
             Our first place prize included: <br />
-            <ol className="list-decimal">
-              <li>
-                A formal interview with AI2 incubator partners to explore a
-                potential investment of up to $500,000
-              </li>
-              <li>90 minute pitch coaching session with Pitch4Impact</li>
-              <li>
-                SWOT debriefing with Mossy Ventures and free entry into the most
-                relevant Mossy Ventures angel conference program
-              </li>
-              <li>
-                1 hour consultation every other week for 90 days and a 1 page
-                website from The Briarwood Group
-              </li>
-              <li>A 90-day hot desk package at SURF Incubator</li>
-              <li>
-                A $200 gift card to Ciudad Grill restaurant from Ascend VC
-              </li>
-              <li>
-                A pitch recording for Y-combinator submission from Passion Fruit
-              </li>
-              <li>$2,500 in OpenAI credits from OpenAI</li>
-            </ol>
           </p>
+          <ol className="list-decimal">
+            <li>
+              A formal interview with AI2 incubator partners to explore a
+              potential investment of up to $500,000
+            </li>
+            <li>90 minute pitch coaching session with Pitch4Impact</li>
+            <li>
+              SWOT debriefing with Mossy Ventures and free entry into the most
+              relevant Mossy Ventures angel conference program
+            </li>
+            <li>
+              1 hour consultation every other week for 90 days and a 1 page
+              website from The Briarwood Group
+            </li>
+            <li>A 90-day hot desk package at SURF Incubator</li>
+            <li>A $200 gift card to Ciudad Grill restaurant from Ascend VC</li>
+            <li>
+              A pitch recording for Y-combinator submission from Passion Fruit
+            </li>
+            <li>$2,500 in OpenAI credits from OpenAI</li>
+          </ol>
         </div>
         <h2 ref={nextRef}>DubHacks NEXT</h2>
         <Image
