@@ -127,6 +127,7 @@ export default function Home() {
             <GitHubCalendar
               username={"briancaow"}
               transformData={selectLastHalfYear}
+              colorScheme="light"
               hideColorLegend
               fontSize={16}
               labels={{
