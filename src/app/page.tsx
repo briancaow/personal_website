@@ -258,7 +258,7 @@ export default function Home() {
         <div className="flex flex-col items-center lg:w-[900px] md:w-[700px]">
           <p className="italic">April, 2023</p>
           <p>
-            Participated and won first place in an AI hackathon with my friend
+            Participated and won first place in an AI hackathon with my friend{" "}
             <a href="https://www.linkedin.com/in/parsas/">Parsa</a> and over 200
             tech enthusiasts in Seattle. Developed an application we called
             Amethyst that could break any topic down into subtopics recursively,
