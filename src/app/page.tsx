@@ -8,6 +8,7 @@ import HackathonCarousel from "./components/hackathon_carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LavinCarousel from "./components/lavin_carousel";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const selectLastHalfYear: Props["transformData"] = (contributions) => {
@@ -219,6 +220,7 @@ export default function Home() {
               able to discover, understand, and retain relevant information
               without leaving their browser.
             </p>
+            <Link href={"/amethyst_privacy_policy"}>Privacy Policy Page</Link>
           </div>
           <AmethystCarousel />
         </div>
