@@ -118,7 +118,6 @@ export default function Home() {
             🇻🇳 Vietnamese <br />
             🎓 University of Washington <br />
             💻 Computer Science <br />
-            🙏 Looking for work <br />
             🏂 Snowboarding {">"} Skiing <br />
           </p>
         </Section>
